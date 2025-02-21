@@ -1,80 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Skoop AI Navbar</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skoop AI</title>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #1a202c;
+      color: white;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      background-color: #2d3748;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+    }
+
+    nav a.demo-btn {
+      background-color: #805ad5;
+      padding: 0.5rem 1rem;
+      border-radius: 0.375rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+
+    .flex {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .flex-col {
+      flex-direction: column;
+    }
+
+    .flex-row {
+      flex-direction: row;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .main-heading {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .highlight {
+      color: #9f7aea;
+    }
+
+    .text-gray {
+      color: #a0aec0;
+    }
+
+    .btn {
+      background-color: #805ad5;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.375rem;
+      text-decoration: none;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .feature-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 3rem 1.5rem;
+      background-color: #2d3748;
+      margin-top: 3rem;
+    }
+
+    .section-text {
+      max-width: 50%;
+    }
+
+    .section-text h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .section-text p {
+      font-size: 1.125rem;
+      color: #e2e8f0;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-text ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .section-text li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-text li::before {
+      content: "✔";
+      color: #9f7aea;
+      margin-right: 0.5rem;
+    }
+
+    .section-image img {
+      width: 100%;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 768px) {
+      .section-text, .section-image {
+        max-width: 100%;
+      }
+
+      .section {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
-  <div>
+  <header>
+    <h1>Skoop AI</h1>
     <nav>
-      <div class="logo">Skoop AI</div>
-      <div class="nav-links">
-        <a href="#features">Features</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <div class="nav-button">
-        <a href="#get-started">View Demo</a>
-      </div>
+      <a href="#">Features</a>
+      <a href="#">Contact</a>
+      <a href="#" class="demo-btn">View Demo</a>
     </nav>
-  </div>
+  </header>
 
-  <div class="content">
-    <div class="text-content">
-      <p id="revo">
-        Revolutionise<br>
-        market research<br>
-        with Skoop AI
+  <main class="container">
+    <div class="flex flex-row">
+      <div class="text-section" style="order: 1; flex: 1;">
+        <h2 class="main-heading">
+          Revolutionize<br />
+          <span class="highlight">Market Research</span><br />
+          with Skoop AI
+        </h2>
+        <p class="text-gray">
+          Gain unparalleled insights into your competitors and dominate your industry with our advanced AI-powered market research tool.
+        </p>
+        <a class="btn" href="#">View Demo</a>
+      </div>
+      <div class="image-section" style="order: 2; flex: 1;">
+        <img src="Dashboard.jpg" alt="Dashboard Image" width="600" height="400" />
+      </div>
+    </div>
+
+    <div class="features">
+      <div>
+        <h3 class="feature-title">10K+</h3>
+        <p class="text-gray">Companies Tracked</p>
+      </div>
+      <div>
+        <h3 class="feature-title">100+</h3>
+        <p class="text-gray">Markets Analyzed</p>
+      </div>
+      <div>
+        <h3 class="feature-title">1M+</h3>
+        <p class="text-gray">Data Points</p>
+      </div>
+      <div>
+        <h3 class="feature-title">95%</h3>
+        <p class="text-gray">Insights Accuracy</p>
+      </div>
+    </div>
+  </main>
+
+  <section class="section">
+    <div class="section-text">
+      <h2>
+        Meet the future of<br />
+        <span class="highlight">competitor analysis</span>
+      </h2>
+      <p>
+        Transform your market research with AI-powered insights that give you the competitive edge. Understand your competition, predict market trends, and make data-driven decisions with confidence.
       </p>
+      <ul>
+        <li>Advanced metrics tracking with real-time updates</li>
+        <li>Comprehensive rank tracking and SEO analysis</li>
+        <li>Intelligent mentor strategy recommendations</li>
+      </ul>
     </div>
-    <div class="image-content">
-      <a href="#"><img src="Dashboard.jpg" alt="MacBook" id="ut"></a>
+    <div class="section-image">
+      <img src="MacBook Pro 14_ - 8.png" alt="Laptop displaying Skoop AI dashboard" width="600" height="400" />
     </div>
-  </div>
-
-  <!-- New Section with Feature Images -->
-  <div class="features-section" id="features">
-    <h2>Powerful Features</h2>
-
-    <div class="feature-list">
-      <div class="feature-points">
-        <p><a href="#market-analysis">Market Analysis</a></p>
-        <p><a href="#competitor">Competitor Insights</a></p>
-        <p><a href="#mentor-strategy">Mentor Strategy</a></p>
-        <p><a href="#user">User Research</a></p>
-      </div>
-
-      <div class="feature-images">
-        <div class="feature-item" id="market-analysis">
-          <img src="Screenshot 2025-01-27 052258.png" alt="Market Analysis">
-        </div>
-
-        <div class="feature-item" id="competitor">
-          <img src="Screenshot 2025-01-27 053859.png" alt="Competitor">
-        </div>
-
-        <div class="feature-item" id="mentor-strategy">
-          <img src="Screenshot 2025-01-27 053920.png" alt="Mentor Strategy">
-        </div>
-
-        <div class="feature-item" id="user">
-          <img src="Screenshot 2025-02-07 031244.png" alt="User">
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <br>
-  <p id="line">Platform Overview</p>
-  <div class="platform-overview">
-    <img src="Screenshot 2025-02-03 063918.png">
-    <img src="Screenshot 2025-02-03 081018.png">
-    <img src="Screenshot 2025-02-03 055402.png">
-    <img src="Screenshot 2025-02-03 081041.png">
-    <img src="Screenshot 2025-02-03 063851.png">
-    <img src="Screenshot 2025-02-07 040801.png">
-    <img src="Screenshot 2025-02-07 041402.png">
-  </div>
+  </section>
 </body>
 </html>
